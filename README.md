@@ -75,11 +75,33 @@ dectemps_df.describe()
 
 <br/>
 
-#### From the inital temperature analysis of June and December, it is clear that Oahu has a very mild climate year round. The differences in average temp and minimum temp is very small. The maximum temp between June and December only differ by 2 degrees. It looks like a surf and ice cream shop could operate for the entire year.
+#### From the inital temperature analysis of June and December, it is clear that Oahu has a very mild climate year round. The differences in average temp and minimum temp is very small. The maximum temp between June and December only differ by 2 degrees. It looks like a surf and ice cream shop could operate for the entire year. In the chart below it is seen that December has more days in the less than 70 degree range and June has more days in the greater that 75 degrees. But as stated before these temperature ranges are very small and the shop could have mostly mild temps all year long.
+
+<br/>
 
    ![Hists](./Resources/hist_temp.png) 
 
 
 
 
-#### Another aspect the potential shop owner my want to see is the differences in precipitation for these 2 months of the year. 
+#### Another aspect the potential shop owner may want to see is the differences in precipitation for these 2 months of the year. Below are 2 queries run to get the statistics for precipitation for June and December for Oahu.
+
+```Python
+# Get the precipitation data for June
+date_str = "06"
+precip = session.query(Measurement.prcp).\
+    filter(func.strftime("%m", Measurement.date) == date_str).all()
+juneprecip = list(np.ravel(precip))
+juneprecip_df = pd.DataFrame(juneprecip, columns=['June Precipt'])
+juneprecip_df.describe()
+```
+
+```Python
+# Get the precipitation data for December
+date_str1 = "12"
+precip1 = session.query(Measurement.prcp).\
+    filter(func.strftime("%m", Measurement.date) == date_str1).all()
+decprecip = list(np.ravel(precip1))
+decprecip_df = pd.DataFrame(decprecip, columns=['Dec Precipt'])
+decprecip_df.describe()
+```
