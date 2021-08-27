@@ -75,4 +75,11 @@ dectemps_df.describe()
 
 <br/>
 
-#### From the inital temperature analysis of June and December, it is clear that Oahu has a very mild climate year round. The differences in average temp and minimum temp is very small. The maximum temp between June and December only differ by 2 degrees. It looks like a surf and ice cream shop could operate for the entire year. Another aspect the potential shop owner my want to see is the differences in precipitation for these 2 months of the year. 
+#### From the inital temperature analysis of June and December, it is clear that Oahu has a very mild climate year round. The differences in average temp and minimum temp is very small. The maximum temp between June and December only differ by 2 degrees. It looks like a surf and ice cream shop could operate for the entire year.
+
+   ![Hists](./Resources/hist_temp.png) 
+
+
+
+
+#### Another aspect the potential shop owner my want to see is the differences in precipitation for these 2 months of the year. 
