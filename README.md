@@ -58,5 +58,21 @@ dectemps_df.describe()
 - Mean temperature is not much higher in June vs December (indicating a very moderate climate) 
     - June = 74.9 and December = 71.0
 
-- Mean temperature is not much higher in June vs December (indicating a very moderate climate) 
-    - June = 74.9 and December = 71.0
+- Minimum temperature in December is only 8 degrees lower than the minimum temp in June
+    - June = 64 and December = 56
+
+- Maximum temperature in June is only 2 degrees higher than the maximum temp in December
+    - June = 85 and December = 83
+
+- The Interquartile Range (IQR) for June overlaps the IQR for December, as seen in the graph below
+
+     ![IQRs](./Resources/IQR_temp.png) 
+
+
+<br/>
+
+### Summary
+
+<br/>
+
+#### From the inital temperature analysis of June and December, it is clear that Oahu has a very mild climate year round. The differences in average temp and minimum temp is very small. The maximum temp between June and December only differ by 2 degrees. It looks like a surf and ice cream shop could operate for the entire year. Another aspect the potential shop owner my want to see is the differences in precipitation for these 2 months of the year. 
