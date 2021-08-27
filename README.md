@@ -108,24 +108,36 @@ decprecip_df.describe()
 
 <br/>
 
-#### Another aspect the potential shop owner may want to see is the differences in precipitation for these 2 months of the year. Below are 2 queries run to get the statistics for precipitation for June and December for Oahu.
+#### Here are the precipitation statistics for Oahu for June
 
-```Python
-# Get the precipitation data for June
-date_str = "06"
-precip = session.query(Measurement.prcp).\
-    filter(func.strftime("%m", Measurement.date) == date_str).all()
-juneprecip = list(np.ravel(precip))
-juneprecip_df = pd.DataFrame(juneprecip, columns=['June Precipt'])
-juneprecip_df.describe()
-```
+<br/>
 
-```Python
-# Get the precipitation data for December
-date_str1 = "12"
-precip1 = session.query(Measurement.prcp).\
-    filter(func.strftime("%m", Measurement.date) == date_str1).all()
-decprecip = list(np.ravel(precip1))
-decprecip_df = pd.DataFrame(decprecip, columns=['Dec Precipt'])
-decprecip_df.describe()
-```
+   ![June Precip](./Resources/june_prec.png) 
+
+<br/>
+
+#### Here are the precipitation statistics for Oahu for December
+
+<br/>
+
+   ![Dec Precip](./Resources/dec_prec.png)    
+
+<br/>
+
+#### December has more tha 50% higher average precipitation than June (.22 vs .14) but the actual amounts are quite low. Below is a graphical comparison of the two months and their precipitaion distributions. The number of days with any precipitation over 0.5 are very small for both months.
+
+<br/>
+
+   ![Hist Precip](./Resources/hist_prec.png)    
+   
+<br/>
+
+#### As seen with the temperature data the Interquartile Range (IQR) is very similar for June and December for precipitation. 
+
+<br/>
+
+   ![IQR Precip](./Resources/IQR_prec.png)    
+   
+<br/>
+
+### Conclusion: The surf and ice cream shop will do very well all year round in Oahu based on the weather data for June and December. These months from two different calendar seasons show that Oahu has a very moderate and consistant climate.
